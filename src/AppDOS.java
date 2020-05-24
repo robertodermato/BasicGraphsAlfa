@@ -7,7 +7,9 @@ public class AppDOS
     public static void main(String args[])
     {
 
-        String arquivo = "caso4_cohen.txt";
+        long tempoInicio = System.currentTimeMillis();
+
+        String arquivo = "caso3_cohen.txt";
 
         In arq = new In(arquivo);
         String aux = "";
@@ -115,13 +117,19 @@ public class AppDOS
         }
         labirintoFinal[localHeroiY][localHeroiX] = 'A';
         labirintoFinal[localVilaoY][localVilaoX] = 'B';
-
+/*
         for(int i=0; i<tamanhoVertical; i++){
             for(int k=0; k<tamanhoHorizontal; k++){
                 System.out.print(labirintoFinal[i][k]);
             }
             System.out.println("");
         }
+
+
+ */
+        long tempoFinal = System.currentTimeMillis();
+        double tempoTotal = (tempoFinal - tempoInicio)*1.0/1000;
+        System.out.println("Tempo de execução de " + arquivo + " é: " + tempoTotal + "s.");
 
     }
 }
