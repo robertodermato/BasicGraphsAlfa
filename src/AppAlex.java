@@ -1,6 +1,8 @@
 import java.io.File;
 import java.util.List;
 
+//Usa as classes Coordinates, Maze e ServiceLogic
+
 public class AppAlex {
 
         public static void main(String[] args) throws Exception {
