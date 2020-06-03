@@ -7,12 +7,12 @@ public class AppDOS
 
     public static void main(String args[]){
 
-        executaLabirinto("caso1_cohen.txt");
-        executaLabirinto("caso2_cohen.txt");
-        executaLabirinto("caso3_cohen.txt");
-        executaLabirinto("caso4_cohen.txt");
-        executaLabirinto("caso5_cohen.txt");
-        //executaLabirinto("caso6_cohen.txt");
+        //executaLabirinto("caso1_cohen.txt");
+        //executaLabirinto("caso2_cohen.txt");
+        //executaLabirinto("caso3_cohen.txt");
+        //executaLabirinto("caso4_cohen.txt");
+        //executaLabirinto("caso5_cohen.txt");
+        executaLabirinto("caso6_cohen.txt");
         //executaLabirinto("caso7_cohen.txt");
 
     }
