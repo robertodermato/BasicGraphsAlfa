@@ -4,12 +4,24 @@ import java.util.HashMap;
 // em largura (BFS) num grafo não dirigido
 public class AppDOS
 {
-    public static void main(String args[])
+
+    public static void main(String args[]){
+
+        executaLabirinto("caso1_cohen.txt");
+        executaLabirinto("caso2_cohen.txt");
+        executaLabirinto("caso3_cohen.txt");
+        executaLabirinto("caso4_cohen.txt");
+        executaLabirinto("caso5_cohen.txt");
+        //executaLabirinto("caso6_cohen.txt");
+        //executaLabirinto("caso7_cohen.txt");
+
+    }
+
+
+    public static void executaLabirinto (String arquivo)
     {
 
         long tempoInicio = System.currentTimeMillis();
-
-        String arquivo = "caso3_cohen.txt";
 
         In arq = new In(arquivo);
         String aux = "";
@@ -89,7 +101,7 @@ public class AppDOS
 
         BreadthFirstPaths caminhamentoLargura = new BreadthFirstPaths(grafoLabirinto, 1);
         int tamanhoMenorCaminho = caminhamentoLargura.distTo(2);
-        System.out.println(tamanhoMenorCaminho);
+        System.out.println("O menor caminho entre o heroi e o bandido é: " + tamanhoMenorCaminho);
         Iterable<Integer> path = caminhamentoLargura.pathTo(2);
 
         for (int vertex : path){
@@ -130,6 +142,10 @@ public class AppDOS
         long tempoFinal = System.currentTimeMillis();
         double tempoTotal = (tempoFinal - tempoInicio)*1.0/1000;
         System.out.println("Tempo de execução de " + arquivo + " é: " + tempoTotal + "s.");
+        System.out.println("");
+        System.out.println("");
 
     }
+
+
 }
