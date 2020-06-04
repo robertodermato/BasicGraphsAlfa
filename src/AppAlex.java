@@ -9,23 +9,23 @@ public class AppAlex {
 
             File maze1 = new File("");
 
-            maze1 = new File("caso1_cohen.txt");
-            execute(maze1);
+            //maze1 = new File("caso1_cohen.txt");
+            //execute(maze1);
 
-            maze1 = new File("caso2_cohen.txt");
-            execute(maze1);
+            //maze1 = new File("caso2_cohen.txt");
+            //execute(maze1);
 
-            maze1 = new File("caso3_cohen.txt");
-            execute(maze1);
+            //maze1 = new File("caso3_cohen.txt");
+            //execute(maze1);
 
-            maze1 = new File("caso4_cohen.txt");
-            execute(maze1);
+            //maze1 = new File("caso4_cohen.txt");
+            //execute(maze1);
 
-            maze1 = new File("caso5_cohen.txt");
-            execute(maze1);
+            //maze1 = new File("caso5_cohen.txt");
+            //execute(maze1);
 
-            maze1 = new File("caso6_cohen.txt");
-            execute(maze1);
+            //maze1 = new File("caso6_cohen.txt");
+            //execute(maze1);
 
             maze1 = new File("caso7_cohen.txt");
             execute(maze1);

@@ -71,9 +71,14 @@ public class BreadthFirstPaths {
             int v = q.dequeue();
             for (int w : G.adj(v)) {
                 if (!marked[w]) {
+
                     edgeTo[w] = v;
                     distTo[w] = distTo[v] + 1;
                     marked[w] = true;
+
+                    //se tiver encontrado o bandido, termine o while
+                    if (w==2) return;
+
                     q.enqueue(w);
                 }
             }
