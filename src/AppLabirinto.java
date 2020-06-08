@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 // Implementa o algoritmo Graus de Separação, através de caminhamento
 // em largura (BFS) num grafo não dirigido
-public class AppDOS
+public class AppLabirinto
 {
 
     public static void main(String args[]){
@@ -11,7 +11,7 @@ public class AppDOS
         executaLabirinto("caso2_cohen.txt");
         executaLabirinto("caso3_cohen.txt");
         executaLabirinto("caso4_cohen.txt");
-        //executaLabirinto("caso5_cohen.txt");
+        executaLabirinto("caso5_cohen.txt");
         //executaLabirinto("caso6_cohen.txt");
         //executaLabirinto("caso7_cohen.txt");
 
@@ -97,7 +97,7 @@ public class AppDOS
             }
         }
 
-        // Agora achamos o caminho mais curto.
+        // Agora acharemos o caminho mais curto.
 
         BreadthFirstPaths caminhamentoLargura = new BreadthFirstPaths(grafoLabirinto, 1);
         int tamanhoMenorCaminho = caminhamentoLargura.distTo(2);
