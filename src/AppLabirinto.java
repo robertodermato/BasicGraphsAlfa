@@ -50,6 +50,7 @@ public class AppLabirinto
         * 2 - B
         * A partir do 4 teremos os pontos transformados em números
         * 0 - #
+        * Localizaremos as coordenadas do herói e do vilão
         * */
 
         int vertice = 4;
@@ -79,6 +80,8 @@ public class AppLabirinto
         System.out.println("O heroi está em X: " + localHeroiX + " Y: " + localHeroiY);
         System.out.println("O vilão está em X: " + localVilaoX + " Y: " + localVilaoY);
 
+        // Criação do grafo e das arestas entre os vértices válidos
+
         Graph grafoLabirinto = new Graph(tamanhoHorizontal * tamanhoVertical);
 
         for (int i=0; i < tamanhoVertical; i++){
@@ -97,11 +100,14 @@ public class AppLabirinto
             }
         }
 
-        // Agora acharemos o caminho mais curto.
+        // Agora acharemos o tamanho do caminho mais curto.
 
         BreadthFirstPaths caminhamentoLargura = new BreadthFirstPaths(grafoLabirinto, 1);
         int tamanhoMenorCaminho = caminhamentoLargura.distTo(2);
         System.out.println("O menor caminho entre o heroi e o bandido é: " + tamanhoMenorCaminho);
+
+        // Criamos um trajeto de números 3 pelo caminho mais curto
+
         Iterable<Integer> path = caminhamentoLargura.pathTo(2);
 
         for (int vertex : path){
@@ -113,6 +119,9 @@ public class AppLabirinto
                 }
             }
         }
+
+        // Recriamos o labirinto com pontos e # e X no trajeto mais curto
+
         char [][] labirintoFinal = new char[tamanhoVertical][tamanhoHorizontal];
 
         for(int i=0; i<tamanhoVertical; i++){
@@ -130,6 +139,8 @@ public class AppLabirinto
         labirintoFinal[localHeroiY][localHeroiX] = 'A';
         labirintoFinal[localVilaoY][localVilaoX] = 'B';
 /*
+        // Para mostrar na tela o labirinto final é só descomentar o algoritmo abaixo
+
         for(int i=0; i<tamanhoVertical; i++){
             for(int k=0; k<tamanhoHorizontal; k++){
                 System.out.print(labirintoFinal[i][k]);
@@ -139,6 +150,7 @@ public class AppLabirinto
 
 
  */
+        // Apenas para mostrar ao usuário o tempo de execução
         long tempoFinal = System.currentTimeMillis();
         double tempoTotal = (tempoFinal - tempoInicio)*1.0/1000;
         System.out.println("Tempo de execução de " + arquivo + " é: " + tempoTotal + "s.");
